@@ -1,7 +1,8 @@
 """
-Ryan McKirdy
+Author: Ryan McKirdy
+Date: 2/3/2020
 
-Implementation of Hello Quantum level 1 in qiskit
+Implementation of Hello Quantum Level 1, Puzzle 1 and its solution in qiskit
 """
 
 from qiskit import(
@@ -20,8 +21,10 @@ circuit = QuantumCircuit(2)
 
 #%%
 
-# Add a X gate on qubit 0
-circuit.x(1)
+# Setup
+circuit.x(0)
+
+# Solve
 circuit.x(0)
 
 # Map the quantum measurement to the classical bits
