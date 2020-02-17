@@ -1,8 +1,8 @@
 """
 Author: Ryan McKirdy
-Date: 2/3/2020
+Date: 2/17/2020
 
-Implementation of Hello Quantum Level 1, Puzzle 1 and its solution in qiskit
+Implementation of Hello Quantum Level 4, Puzzle 6 and its solution in qiskit
 """
 
 from qiskit import(
@@ -23,9 +23,14 @@ circuit = QuantumCircuit(2)
 
 # Setup
 circuit.x(1)
+circuit.h(1)
 
 # Solve
-circuit.x(1)
+circuit.h(0)
+circuit.cz(1,0)
+
+# Make results deterministic
+circuit.h(0)
 
 # Map the quantum measurement to the classical bits
 circuit.measure_all()
